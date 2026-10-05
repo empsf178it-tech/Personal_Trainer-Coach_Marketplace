@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Plans & Membership — PULSEFIT Marketplace</title>
+  <meta name="description" content="Explore transparent coaching plans for strength, nutrition, and recovery. Choose monthly or annual options with zero lock-in contracts.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR (Solid state on interior pages) -->
+  <header class="pulse-header solid-nav" role="banner">
+    <div class="pulse-nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PULSEFIT Homepage">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <nav class="desktop-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="desktop-nav-link">Home</a>
+        <a href="about.html" class="desktop-nav-link">About</a>
+        <a href="services.html" class="desktop-nav-link">Services</a>
+        <a href="pricing.html" class="desktop-nav-link active">Pricing</a>
+        <a href="contact.html" class="desktop-nav-link">Contact</a>
+      </nav>
+
+      <div class="desktop-header-cta d-flex align-items-center gap-3">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+        <a href="services.html#coach-directory" class="btn-pulse btn-pulse-primary pulse-badge-glow">
+          <span class="d-inline-block rounded-circle bg-dark" style="width:6px; height:6px; margin-right:4px;"></span> Find Your Coach <span class="btn-icon">→</span>
+        </a>
+      </div>
+
+
+      <button class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileOverlay">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="nav-num">01 —</span> Home
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">
+          <span class="nav-num">02 —</span> About
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="services.html" class="mobile-nav-link">
+          <span class="nav-num">03 —</span> Services
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="pricing.html" class="mobile-nav-link active">
+          <span class="nav-num">04 —</span> Pricing
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">
+          <span class="nav-num">05 —</span> Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-overlay-footer">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <span class="mobile-tagline font-heading mb-0" style="font-size:0.85rem; color:var(--color-graphite);">Switch Theme</span>
+        <button class="theme-toggle-btn mobile-theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-pulse btn-pulse-primary w-100 text-center">Get Started Today</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- UNIQUE SECTION 01 — PRICING HERO & BILLING TOGGLE -->
+    <section class="section-padding bg-warm-white" aria-labelledby="pricing-hero-heading">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">TRANSPARENT MEMBERSHIPS</span>
+            <h1 id="pricing-hero-heading" class="h1-display text-dark mt-2 mb-3">Invest in Your Performance.</h1>
+            <p class="lead-text text-graphite mb-4">
+              Structured coaching memberships designed for real results. Switch plans or pause anytime with zero cancellation penalties.
+            </p>
+
+            <!-- Billing Toggle Widget -->
+            <div class="billing-toggle-wrapper">
+              <span class="text-dark font-heading fw-bold" style="font-size:0.9rem;">Monthly</span>
+              <div id="billingToggle" class="toggle-switch" role="switch" aria-checked="false" aria-label="Toggle annual billing discount">
+                <div class="toggle-slider"></div>
+              </div>
+              <span class="text-dark font-heading fw-bold" style="font-size:0.9rem;">Annual Billing <span class="badge bg-success text-dark ms-1">Save 20%</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 02 — PRICING CARDS (3 TIERS WITH ANIMATIONS) -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="plans-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">CHOOSE YOUR SCALE</span>
+            <h2 id="plans-heading" class="h2-display text-dark mt-2">Coaching Tiers.</h2>
+          </div>
+        </div>
+
+        <div class="pulse-grid-3 reveal-stagger">
+          <!-- Tier 1: Essential -->
+          <div class="pricing-card border border-secondary border-opacity-10 shadow-sm p-4 rounded-4">
+            <h3 class="h4 text-dark font-heading mb-1">Essential</h3>
+            <p class="text-secondary mb-4" style="font-size:0.88rem;">Ideal for self-directed athletes needing structured guidance.</p>
+            
+            <div class="mb-4">
+              <span class="price-display text-dark">$<span class="price-val text-dark" data-monthly="149" data-annual="119">149</span></span>
+              <span class="price-period text-secondary">/ month</span>
+            </div>
+
+            <ul class="feature-check-list mb-4 flex-grow-1" style="margin:0 0 2rem 0;">
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Custom periodized workout plan
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Biweekly coach check-ins & adjustments
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                In-app direct text messaging
+              </li>
+              <li class="feature-check-item text-secondary opacity-50" style="font-size:0.9rem; text-decoration:line-through;">
+                <span>✕</span> Video form review
+              </li>
+            </ul>
+
+            <a href="contact.html?plan=Essential" class="btn-pulse btn-pulse-dark w-100">
+              Select Essential
+            </a>
+          </div>
+
+          <!-- Tier 2: Pro Performance (FEATURED) -->
+          <div class="pricing-card featured border border-success border-2 shadow-md p-4 rounded-4 position-relative">
+            <span class="pricing-badge">MOST POPULAR</span>
+            <h3 class="h4 text-dark font-heading mb-1">Pro Performance</h3>
+            <p class="text-secondary mb-4" style="font-size:0.88rem;">Full 1-on-1 coaching for strength, nutrition, and mobility.</p>
+            
+            <div class="mb-4">
+              <span class="price-display text-success">$<span class="price-val" data-monthly="279" data-annual="223">279</span></span>
+              <span class="price-period text-secondary">/ month</span>
+            </div>
+
+            <ul class="feature-check-list mb-4 flex-grow-1" style="margin:0 0 2rem 0;">
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Everything in Essential
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Weekly video form breakdown
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Custom meal strategy & macro targets
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Weekly 1-on-1 video feedback
+              </li>
+            </ul>
+
+            <a href="contact.html?plan=Pro" class="btn-pulse btn-pulse-dark w-100">
+              Select Pro Performance
+            </a>
+          </div>
+
+          <!-- Tier 3: Elite Transformation -->
+          <div class="pricing-card border border-secondary border-opacity-10 shadow-sm p-4 rounded-4">
+            <h3 class="h4 text-dark font-heading mb-1">Elite Transformation</h3>
+            <p class="text-secondary mb-4" style="font-size:0.88rem;">Concierge athletic oversight with dual coach support.</p>
+            
+            <div class="mb-4">
+              <span class="price-display text-dark">$<span class="price-val text-dark" data-monthly="449" data-annual="359">449</span></span>
+              <span class="price-period text-secondary">/ month</span>
+            </div>
+
+            <ul class="feature-check-list mb-4 flex-grow-1" style="margin:0 0 2rem 0;">
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Everything in Pro Performance
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Dual coach access (Strength + Nutrition)
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Daily HRV & recovery monitoring
+              </li>
+              <li class="feature-check-item text-dark" style="font-size:0.9rem;">
+                <span class="check-icon-circle">✓</span>
+                Priority 2-hour response window
+              </li>
+            </ul>
+
+            <a href="contact.html?plan=Elite" class="btn-pulse btn-pulse-dark w-100">
+              Select Elite Plan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 03 — INCLUDED WITH EVERY PLAN (MICRO-ANIMATIONS GRID) -->
+    <section class="section-padding bg-warm-white" aria-labelledby="included-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">CORE BENEFITS</span>
+            <h2 id="included-heading" class="h2-display text-dark mt-2">Included Standard With Every Plan.</h2>
+          </div>
+        </div>
+
+        <div class="pulse-grid-4 reveal-stagger">
+          <div class="pillar-card">
+            <div class="pillar-icon-box mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-1">Verified Coach Match</h3>
+            <p class="text-secondary" style="font-size:0.88rem;">Matched directly with accredited strength and recovery professionals.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-1">Continuous Adjustments</h3>
+            <p class="text-secondary" style="font-size:0.88rem;">Programs evolve dynamically as your physical benchmarks improve.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-1">Direct In-App Chat</h3>
+            <p class="text-secondary" style="font-size:0.88rem;">Send video clips, form questions, and log meals with your dedicated coach.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-1">Zero Lock-In Contracts</h3>
+            <p class="text-secondary" style="font-size:0.88rem;">Pause, upgrade, or change coaches anytime with 30-day flexibility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 04 — INTERACTIVE HABIT & GOAL IMPACT CALCULATOR -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="calc-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">INTERACTIVE TOOL</span>
+            <h2 id="calc-heading" class="h2-display text-dark mt-2">Habit & Velocity Calculator.</h2>
+            <p class="lead-text mt-2">Estimate your monthly coach review hours and progress velocity based on your planned training frequency.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="calc-card reveal-on-scroll">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <h3 class="h4 font-heading text-dark mb-3">1. Target Weekly Sessions</h3>
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="text-secondary font-heading" style="font-size:0.9rem;">Weekly Training Frequency:</span>
+                    <span id="calcDaysVal" class="fw-bold font-heading text-dark" style="font-size:1.25rem;">3</span> <span class="font-heading text-dark">days/wk</span>
+                  </div>
+                  <input type="range" id="calcDaysSlider" class="calc-range-slider mb-4" min="2" max="5" value="3" step="1">
+
+                  <h3 class="h4 font-heading text-dark mb-3">2. Primary Focus</h3>
+                  <div class="d-flex gap-2 flex-wrap mb-2">
+                    <button class="filter-btn calc-goal-btn active" data-goal="strength">Strength & Power</button>
+                    <button class="filter-btn calc-goal-btn" data-goal="nutrition">Nutrition & Fueling</button>
+                    <button class="filter-btn calc-goal-btn" data-goal="mobility">Mobility & Rest</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="d-flex flex-column gap-3">
+                    <div class="calc-stat-box border border-secondary border-opacity-15 shadow-sm p-4 rounded-4">
+                      <span class="text-label text-label-dark">ESTIMATED COACH OVERSIGHT</span>
+                      <div id="calcHoursVal" class="calc-stat-num text-success mt-1">8 hrs/mo</div>
+                    </div>
+                    <div class="calc-stat-box border border-secondary border-opacity-15 shadow-sm p-4 rounded-4">
+                      <span class="text-label text-label-dark">PROGRESS VELOCITY RATING</span>
+                      <div id="calcVelocityVal" class="calc-stat-num text-success mt-1" style="font-size:1.75rem;">Optimal (2.5x)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIQUE SECTION 05 — MEMBERSHIP GUARANTEE & FINAL CTA -->
+    <section class="section-padding bg-warm-white text-center" aria-labelledby="guarantee-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">30-DAY RISK FREE</span>
+            <h2 id="guarantee-heading" class="h1-display text-dark mt-2 mb-3">100% Satisfaction Guarantee.</h2>
+            <p class="lead-text text-graphite mb-4">
+              If within your first 30 days you feel your coach match or programming isn't aligned with your goals, we will re-match you with a new coach or issue a full refund.
+            </p>
+            <a href="contact.html" class="btn-pulse btn-pulse-dark">
+              SELECT YOUR PLAN <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pulse-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-logo text-white mb-3">
+            <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+          </a>
+          <p class="text-graphite mb-0" style="font-size:0.95rem; max-width:280px;">
+            Train Smarter. Recover Better.<br>Connecting individuals with premier coaching guidance.
+          </p>
+          <!-- Social Icons -->
+          <div class="footer-social-row">
+            <!-- Instagram -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="footer-social-btn" aria-label="Subscribe to PULSEFIT on YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#training" class="footer-link">Personal Training</a></li>
+            <li><a href="services.html#nutrition" class="footer-link">Nutrition Coaching</a></li>
+            <li><a href="services.html#recovery" class="footer-link">Mobility & Recovery</a></li>
+            <li><a href="services.html#coach-directory" class="footer-link">Coach Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p class="text-graphite mb-2" style="font-size:0.9rem;">Have questions? Reach our team:</p>
+          <a href="mailto:hello@pulsefitmarketplace.com" class="text-success font-heading text-decoration-none" style="font-size:0.95rem;">hello@pulsefitmarketplace.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PULSEFIT Marketplace. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC MODAL CONTAINER -->
+  <div id="pulseDetailModal" class="modal-backdrop-custom" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content-custom">
+      <button class="modal-close-btn" aria-label="Close modal window">✕</button>
+      <div class="modal-body-dynamic"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

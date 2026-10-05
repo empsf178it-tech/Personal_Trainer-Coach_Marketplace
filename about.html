@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — PULSEFIT Coach Marketplace</title>
+  <meta name="description" content="Learn about the PULSEFIT philosophy and how we connect individuals with expert trainers, nutritionists, and recovery coaches.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR (Solid state on interior pages) -->
+  <header class="pulse-header solid-nav" role="banner">
+    <div class="pulse-nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PULSEFIT Homepage">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <nav class="desktop-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="desktop-nav-link">Home</a>
+        <a href="about.html" class="desktop-nav-link active">About</a>
+        <a href="services.html" class="desktop-nav-link">Services</a>
+        <a href="pricing.html" class="desktop-nav-link">Pricing</a>
+        <a href="contact.html" class="desktop-nav-link">Contact</a>
+      </nav>
+
+      <div class="desktop-header-cta d-flex align-items-center gap-3">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+        <a href="services.html#coach-directory" class="btn-pulse btn-pulse-primary pulse-badge-glow">
+          <span class="d-inline-block rounded-circle bg-dark" style="width:6px; height:6px; margin-right:4px;"></span> Find Your Coach <span class="btn-icon">→</span>
+        </a>
+      </div>
+
+
+      <button class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileOverlay">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="nav-num">01 —</span> Home
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link active">
+          <span class="nav-num">02 —</span> About
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="services.html" class="mobile-nav-link">
+          <span class="nav-num">03 —</span> Services
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="pricing.html" class="mobile-nav-link">
+          <span class="nav-num">04 —</span> Pricing
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">
+          <span class="nav-num">05 —</span> Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-overlay-footer">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <span class="mobile-tagline font-heading mb-0" style="font-size:0.85rem; color:var(--color-graphite);">Switch Theme</span>
+        <button class="theme-toggle-btn mobile-theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-pulse btn-pulse-primary w-100 text-center">Get Started Today</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- SECTION 01 — ABOUT HERO HEADER -->
+    <section class="section-padding bg-warm-white" aria-labelledby="about-hero-heading">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">ABOUT PULSEFIT</span>
+            <h1 id="about-hero-heading" class="h1-display text-dark mt-2 mb-3">Built Around Better Movement.</h1>
+            <p class="lead-text text-graphite mb-0">
+              PULSEFIT was created to bridge the gap between high-performance fitness coaching and everyday lifestyle integration. We believe true physical transformation requires clarity, consistency, and professional guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — OUR MISSION & STORY -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <span class="text-label text-label-dark">OUR MISSION</span>
+            <h2 id="story-heading" class="h2-display text-dark mt-2 mb-4">Empowering Intentional Training.</h2>
+            <p class="text-secondary mb-3" style="font-size:1.05rem; line-height:1.7;">
+              Traditional fitness marketplaces often emphasize quick fixes, extreme workout routines, and unverified promises. PULSEFIT takes a grounded, editorial approach centered around real biomechanics and sustainable lifestyle habits.
+            </p>
+            <p class="text-secondary" style="font-size:1.05rem; line-height:1.7;">
+              We connect individuals with certified personal trainers, nutrition strategists, and mobility specialists who listen first and design around your specific physical needs.
+            </p>
+          </div>
+
+          <div class="col-lg-6 order-lg-1">
+            <div class="rounded-4 overflow-hidden shadow-md reveal-on-scroll">
+              <img src="assets/images/about-story.jpg" alt="Coach guiding client form" class="img-fluid rounded-4 w-100 object-fit-cover" style="min-height:380px;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — OUR PHILOSOPHY -->
+    <section class="section-padding bg-warm-white" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">CORE PRINCIPLES</span>
+            <h2 id="philosophy-heading" class="h2-display text-dark mt-2">What We Stand For.</h2>
+          </div>
+        </div>
+
+        <div class="pulse-grid-3 reveal-stagger">
+          <!-- Principle 1 -->
+          <div class="philosophy-card border border-secondary border-opacity-10 shadow-sm p-4 rounded-4">
+            <div class="philosophy-num text-success">01</div>
+            <h3 class="h4 text-dark mb-3 font-heading">Individuality</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Every body possesses unique structural mechanics and schedules. We build personalized paths rather than generic templates.</p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="philosophy-card border border-secondary border-opacity-10 shadow-sm p-4 rounded-4">
+            <div class="philosophy-num text-success">02</div>
+            <h3 class="h4 text-dark mb-3 font-heading">Consistency</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Sustainable momentum beats short bursts of intensity. We emphasize routines you can comfortably execute long-term.</p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="philosophy-card border border-secondary border-opacity-10 shadow-sm p-4 rounded-4">
+            <div class="philosophy-num text-success">03</div>
+            <h3 class="h4 text-dark mb-3 font-heading">Balance</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Hard training must be matched with equal nutrition and mobility work. True health is a multi-dimensional system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — OUR COACHING COMMUNITY -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="community-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">OUR NETWORK</span>
+            <h2 id="community-heading" class="h2-display text-dark mt-2">A Dedicated Coaching Network.</h2>
+            <p class="lead-text mt-2">Our specialists bring years of hands-on experience in strength conditioning, functional nutrition, and physical restoration.</p>
+          </div>
+        </div>
+
+        <div class="community-grid reveal-stagger">
+          <div class="community-card shadow-sm">
+            <img src="assets/images/coach-alex.jpg" alt="Strength Coach Alex">
+          </div>
+          <div class="community-card shadow-sm">
+            <img src="assets/images/coach-priya.jpg" alt="Nutrition Coach Priya">
+          </div>
+          <div class="community-card shadow-sm">
+            <img src="assets/images/coach-daniel.jpg" alt="Mobility Coach Daniel">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — WHAT MAKES US DIFFERENT -->
+    <section class="section-padding bg-warm-white" aria-labelledby="different-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">DISTINCT APPROACH</span>
+            <h2 id="different-heading" class="h2-display text-dark mt-2">What Makes PULSEFIT Different.</h2>
+          </div>
+        </div>
+
+        <div class="pulse-grid-4 reveal-stagger">
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">🎯</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Personalized Discovery</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Easily filter and match with coaches whose specific expertise matches your exact fitness goals.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">💬</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Clear Communication</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Direct 1-on-1 access to your coach ensures questions are answered promptly and plans adapt in real time.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">⚡</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Flexible Approaches</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Programs designed around your real life, equipment access, and busy work schedules.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">🔄</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Integrated Recovery</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Mobility work and rest protocols are built directly into training plans to prevent burnout.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">🌱</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Sustainable Habit Focus</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">We prioritize long-term lifestyle transformation over temporary drastic diets or extreme routines.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">📈</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Transparent Progress</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Track meaningful metric benchmarks such as strength gains, joint mobility, and energy levels.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">📊</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Data-Driven Audits</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Bi-weekly progress reviews ensure your intensity and nutrition targets adapt dynamically as you transform.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">🌐</div>
+            <div>
+              <h3 class="h4 text-dark font-heading mb-2">Holistic Ecosystem</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Seamlessly bridge fitness, sleep hygiene, and stress management with multi-disciplinary specialist guidance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — CLOSING CTA -->
+    <section class="section-padding bg-soft-gray text-center" aria-labelledby="closing-cta">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">YOUR JOURNEY</span>
+            <h2 id="closing-cta" class="h1-display text-dark mt-2 mb-3">Your Next Chapter Starts Here.</h2>
+            <p class="lead-text text-graphite mb-4">Discover coaching tailored specifically to your body, goals, and schedule.</p>
+            <a href="services.html" class="btn-pulse btn-pulse-dark">
+              EXPLORE SERVICES <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pulse-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-logo text-white mb-3">
+            <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+          </a>
+          <p class="text-graphite mb-0" style="font-size:0.95rem; max-width:280px;">
+            Train Smarter. Recover Better.<br>Connecting individuals with premier coaching guidance.
+          </p>
+          <!-- Social Icons -->
+          <div class="footer-social-row">
+            <!-- Instagram -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="footer-social-btn" aria-label="Subscribe to PULSEFIT on YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#training" class="footer-link">Personal Training</a></li>
+            <li><a href="services.html#nutrition" class="footer-link">Nutrition Coaching</a></li>
+            <li><a href="services.html#recovery" class="footer-link">Mobility & Recovery</a></li>
+            <li><a href="services.html#coach-directory" class="footer-link">Coach Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p class="text-graphite mb-2" style="font-size:0.9rem;">Have questions? Reach our team:</p>
+          <a href="mailto:hello@pulsefitmarketplace.com" class="text-success font-heading text-decoration-none" style="font-size:0.95rem;">hello@pulsefitmarketplace.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PULSEFIT Marketplace. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC MODAL CONTAINER -->
+  <div id="pulseDetailModal" class="modal-backdrop-custom" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content-custom">
+      <button class="modal-close-btn" aria-label="Close modal window">✕</button>
+      <div class="modal-body-dynamic"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

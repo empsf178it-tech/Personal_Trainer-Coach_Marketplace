@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSEFIT — Personal Trainer & Coach Marketplace</title>
+  <meta name="description" content="Connect with expert personal trainers, nutrition specialists, and recovery coaches for personalized fitness guidance tailored to your lifestyle.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="pulse-header" role="banner">
+    <div class="pulse-nav-container">
+      <!-- Left: Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="PULSEFIT Homepage">
+        <!-- Unique brand icon: hexagon with pulse wave -->
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Hexagon background -->
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <!-- Heartbeat pulse line -->
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <!-- Center: Desktop Nav Links -->
+      <nav class="desktop-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="desktop-nav-link active">Home</a>
+        <a href="about.html" class="desktop-nav-link">About</a>
+        <a href="services.html" class="desktop-nav-link">Services</a>
+        <a href="pricing.html" class="desktop-nav-link">Pricing</a>
+        <a href="contact.html" class="desktop-nav-link">Contact</a>
+      </nav>
+
+      <!-- Right: Desktop Unique CTA Button & Theme Toggle -->
+      <div class="desktop-header-cta d-flex align-items-center gap-3">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+        <a href="services.html#coach-directory" class="btn-pulse btn-pulse-primary pulse-badge-glow">
+          <span class="d-inline-block rounded-circle bg-dark" style="width:6px; height:6px; margin-right:4px;"></span> Find Your Coach <span class="btn-icon">→</span>
+        </a>
+      </div>
+
+
+      <!-- Mobile Hamburger Button (ONLY element on right below 992px) -->
+      <button class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileOverlay">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY MENU (Strict Below 992px) -->
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">
+          <span class="nav-num">01 —</span> Home
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">
+          <span class="nav-num">02 —</span> About
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="services.html" class="mobile-nav-link">
+          <span class="nav-num">03 —</span> Services
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="pricing.html" class="mobile-nav-link">
+          <span class="nav-num">04 —</span> Pricing
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">
+          <span class="nav-num">05 —</span> Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-overlay-footer">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <span class="mobile-tagline font-heading mb-0" style="font-size:0.85rem; color:var(--color-graphite);">Switch Theme</span>
+        <button class="theme-toggle-btn mobile-theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-pulse btn-pulse-primary w-100 text-center">Get Started Today</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 01 — HERO -->
+    <section class="hero-section" aria-label="Hero Section">
+      <div class="hero-bg-wrapper">
+        <img src="assets/images/hero-bg.jpg" alt="Athlete training in modern gym" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-spotlight" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="row align-items-center g-5">
+
+          <!-- Left Col: Text & CTAs -->
+          <div class="col-lg-6">
+            <span class="text-label text-label-dark mb-3">PERSONAL TRAINING · NUTRITION · RECOVERY</span>
+
+            <h1 class="h1-display font-heading text-dark mb-3">
+              <span class="hero-title-line">Your Goals.</span>
+              <span class="hero-title-line"><span class="accent-line-green">Your Coach.</span></span>
+              <span class="hero-title-line">Your Pace.</span>
+            </h1>
+
+            <p class="hero-desc text-graphite">
+              Discover expert coaches, personalized training programs, and recovery strategies built around your lifestyle.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="services.html" class="btn-pulse btn-pulse-dark">
+                FIND YOUR COACH <span class="btn-icon">→</span>
+              </a>
+              <a href="#programs" class="btn-pulse btn-pulse-outline-dark">
+                EXPLORE PROGRAMS
+              </a>
+            </div>
+
+            <div class="hero-feature-tags">
+              <span class="hero-tag-item">⚡ 15+ Expert Coaches</span>
+              <span class="hero-tag-item">🥗 Nutrition Plans</span>
+              <span class="hero-tag-item">🔄 Recovery Guided</span>
+            </div>
+          </div>
+
+          <!-- Right Col: Premium Coach Dashboard Card -->
+          <div class="col-lg-6 d-none d-lg-flex justify-content-end align-items-center">
+            <div class="hero-dashboard">
+
+              <!-- Top Bar -->
+              <div class="hero-db-topbar">
+                <div class="hero-db-brand">
+                  <span class="live-pulse-dot"></span>
+                  <span class="font-heading" style="font-size:0.75rem;color:var(--color-green);letter-spacing:0.1em;">LIVE COACH MATCH</span>
+                </div>
+                <span class="hero-db-badge">98% Satisfaction</span>
+              </div>
+
+              <!-- Featured Coach Row -->
+              <div class="hero-db-coach-row">
+                <div class="hero-db-coach-avatars">
+                  <img src="assets/images/coach-alex.jpg" alt="Coach Alex" class="hero-db-avatar hero-db-avatar--lg">
+                  <div class="hero-db-avatar-stack">
+                    <img src="assets/images/coach-priya.jpg" alt="Coach Priya" class="hero-db-avatar hero-db-avatar--sm">
+                    <img src="assets/images/coach-daniel.jpg" alt="Coach Daniel" class="hero-db-avatar hero-db-avatar--sm">
+                  </div>
+                </div>
+                <div class="hero-db-coach-info">
+                  <div class="hero-db-coach-name">Alex Morgan</div>
+                  <div class="hero-db-coach-role">Strength &amp; Conditioning</div>
+                  <div class="hero-db-stars">★★★★★ <span>5.0</span></div>
+                </div>
+              </div>
+
+              <!-- Stats Row -->
+              <div class="hero-db-stats-row">
+                <div class="hero-db-stat">
+                  <div class="hero-db-stat-num">250+</div>
+                  <div class="hero-db-stat-label">Clients</div>
+                </div>
+                <div class="hero-db-stat-divider"></div>
+                <div class="hero-db-stat">
+                  <div class="hero-db-stat-num">15+</div>
+                  <div class="hero-db-stat-label">Coaches</div>
+                </div>
+                <div class="hero-db-stat-divider"></div>
+                <div class="hero-db-stat">
+                  <div class="hero-db-stat-num">&lt;15m</div>
+                  <div class="hero-db-stat-label">Response</div>
+                </div>
+              </div>
+
+              <!-- Pulse Graph -->
+              <div class="hero-db-graph">
+                <div class="hero-db-graph-label">Today's Activity</div>
+                <svg class="pulse-line-svg" viewBox="0 0 260 42" fill="none" aria-hidden="true">
+                  <path d="M0,21 L40,21 L55,5 L70,37 L90,8 L105,28 L120,21 L150,21 L165,6 L178,35 L192,12 L205,26 L220,21 L260,21" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- CTA -->
+              <a href="services.html#coach-directory" class="hero-db-cta">
+                Browse All Coaches <span>→</span>
+              </a>
+
+       
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator d-none d-md-flex">
+        <span>Scroll</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTER BAR (UNIQUE ANIMATION) -->
+    <section class="py-4 bg-soft-gray border-top border-bottom border-dark border-opacity-10" aria-label="Key Performance Statistics">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-4">
+            <div class="counter-num text-dark fw-bold" data-target="250" data-suffix="+">0</div>
+            <p class="text-dark opacity-75 mb-0 font-heading" style="font-size:0.85rem; letter-spacing:0.05em;">CLIENTS MATCHED</p>
+          </div>
+          <div class="col-4">
+            <div class="counter-num text-dark fw-bold" data-target="98" data-suffix="%">0</div>
+            <p class="text-dark opacity-75 mb-0 font-heading" style="font-size:0.85rem; letter-spacing:0.05em;">COACH RETENTION</p>
+          </div>
+          <div class="col-4">
+            <div class="counter-num text-dark fw-bold" data-target="15" data-suffix="+">0</div>
+            <p class="text-dark opacity-75 mb-0 font-heading" style="font-size:0.85rem; letter-spacing:0.05em;">SPECIALIST COACHES</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 02 — OUR APPROACH -->
+    <section class="section-padding bg-warm-white" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">THE PULSEFIT METHOD</span>
+            <h2 id="approach-heading" class="h2-display font-heading text-dark mt-2">Fitness That Fits Your Life.</h2>
+            <p class="lead-text mt-3">We eliminate guesswork by combining structured movement, flexible fueling, and active recovery into one integrated ecosystem.</p>
+          </div>
+        </div>
+
+        <div class="pulse-grid-3 reveal-stagger">
+          <!-- Pillar 1: TRAIN -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11M6.5 17.5h11M4 10h16M4 14h16"/></svg>
+            </div>
+            <h3 class="h4 font-heading text-dark mb-0">TRAIN</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Structured resistance and athletic conditioning workouts tailored directly to your current biomechanics and schedule.</p>
+          </div>
+
+          <!-- Pillar 2: NOURISH -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="h4 font-heading text-dark mb-0">NOURISH</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Practical, sustainable nutrition guidance focused on daily energy, muscle recovery, and long-term habits without rigid restriction.</p>
+          </div>
+
+          <!-- Pillar 3: RECOVER -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.84z"/></svg>
+            </div>
+            <h3 class="h4 font-heading text-dark mb-0">RECOVER</h3>
+            <p class="text-secondary" style="font-size:0.95rem;">Active mobility, joint care, and structured rest planning designed to keep you moving comfortably and injury-free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — FEATURED COACHES -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="coaches-heading">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+          <div>
+            <span class="text-label text-label-dark">EXPERT GUIDANCE</span>
+            <h2 id="coaches-heading" class="h2-display text-dark mt-1">Meet Your Next Coach.</h2>
+          </div>
+          <a href="services.html#coach-directory" class="btn-pulse btn-pulse-outline-dark mt-3 mt-md-0">
+            View All Coaches <span class="btn-icon">→</span>
+          </a>
+        </div>
+
+        <div class="pulse-grid-3 reveal-stagger">
+          <!-- Coach 1: Alex Morgan -->
+          <div class="coach-card">
+            <div class="coach-img-wrapper">
+              <img src="assets/images/coach-alex.jpg" alt="Alex Morgan - Strength Coach" class="coach-img" loading="lazy">
+              <span class="coach-badge">STRENGTH & CONDITIONING</span>
+            </div>
+            <div class="coach-info">
+              <h3 class="h4 text-dark mb-0 font-heading">Alex Morgan</h3>
+              <div class="coach-specialty">Strength & Hypertrophy</div>
+              <div class="coach-exp">6+ Years Coaching Experience</div>
+              <p class="text-secondary mt-2 mb-4" style="font-size:0.9rem;">Specializes in progressive resistance programming and functional force development.</p>
+              <button class="btn-pulse btn-pulse-dark w-100 mt-auto" data-coach-key="alex">
+                View Profile Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Coach 2: Priya Sharma -->
+          <div class="coach-card">
+            <div class="coach-img-wrapper">
+              <img src="assets/images/coach-priya.jpg" alt="Priya Sharma - Nutrition Coach" class="coach-img" loading="lazy">
+              <span class="coach-badge">NUTRITION & LIFESTYLE</span>
+            </div>
+            <div class="coach-info">
+              <h3 class="h4 text-dark mb-0 font-heading">Priya Sharma</h3>
+              <div class="coach-specialty">Metabolic Health & Habits</div>
+              <div class="coach-exp">8+ Years Coaching Experience</div>
+              <p class="text-secondary mt-2 mb-4" style="font-size:0.9rem;">Empowers clients with sustainable food relationships and personalized macro strategies.</p>
+              <button class="btn-pulse btn-pulse-dark w-100 mt-auto" data-coach-key="priya">
+                View Profile Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Coach 3: Daniel Brooks -->
+          <div class="coach-card">
+            <div class="coach-img-wrapper">
+              <img src="assets/images/coach-daniel.jpg" alt="Daniel Brooks - Mobility Coach" class="coach-img" loading="lazy">
+              <span class="coach-badge">MOBILITY & RECOVERY</span>
+            </div>
+            <div class="coach-info">
+              <h3 class="h4 text-dark mb-0 font-heading">Daniel Brooks</h3>
+              <div class="coach-specialty">Joint Health & Recovery</div>
+              <div class="coach-exp">7+ Years Coaching Experience</div>
+              <p class="text-secondary mt-2 mb-4" style="font-size:0.9rem;">Focuses on controlled movement, joint range expansion, and restorative physical health.</p>
+              <button class="btn-pulse btn-pulse-dark w-100 mt-auto" data-coach-key="daniel">
+                View Profile Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — COACHING PROGRAMS -->
+    <section id="programs" class="section-padding bg-warm-white" aria-labelledby="programs-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">TAILORED DISCIPLINES</span>
+            <h2 id="programs-heading" class="h2-display text-dark mt-2">Find the Right Training Path.</h2>
+            <p class="lead-text mt-2">Select a coaching discipline designed for your specific fitness goals and lifestyle needs.</p>
+          </div>
+        </div>
+
+        <div class="pulse-grid-2 reveal-stagger">
+          <!-- Program 1 -->
+          <div class="program-card" data-program-key="strength">
+            <img src="assets/images/program-strength.jpg" alt="Strength & Muscle Building" class="program-img" loading="lazy">
+            <div class="program-overlay">
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <span class="text-label text-success">PROGRAM 01</span>
+                  <h3 class="h3-display text-white mb-1">Strength & Muscle</h3>
+                  <p class="text-light opacity-75 mb-0" style="font-size:0.95rem;">Progressive weight training tailored to your capacity.</p>
+                </div>
+                <div class="program-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 2 -->
+          <div class="program-card" data-program-key="fatloss">
+            <img src="assets/images/program-fatloss.jpg" alt="Fat Loss & Fitness" class="program-img" loading="lazy">
+            <div class="program-overlay">
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <span class="text-label text-success">PROGRAM 02</span>
+                  <h3 class="h3-display text-white mb-1">Fat Loss & Fitness</h3>
+                  <p class="text-light opacity-75 mb-0" style="font-size:0.95rem;">High-yield conditioning for lean physique transformation.</p>
+                </div>
+                <div class="program-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 3 -->
+          <div class="program-card" data-program-key="nutrition">
+            <img src="assets/images/program-nutrition.jpg" alt="Nutrition Coaching" class="program-img" loading="lazy">
+            <div class="program-overlay">
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <span class="text-label text-success">PROGRAM 03</span>
+                  <h3 class="h3-display text-white mb-1">Nutrition Coaching</h3>
+                  <p class="text-light opacity-75 mb-0" style="font-size:0.95rem;">Practical meal strategy & habit transformation.</p>
+                </div>
+                <div class="program-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 4 -->
+          <div class="program-card" data-program-key="recovery">
+            <img src="assets/images/program-recovery.jpg" alt="Mobility & Recovery" class="program-img" loading="lazy">
+            <div class="program-overlay">
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <span class="text-label text-success">PROGRAM 04</span>
+                  <h3 class="h3-display text-white mb-1">Mobility & Recovery</h3>
+                  <p class="text-light opacity-75 mb-0" style="font-size:0.95rem;">Joint restoration and active recovery sessions.</p>
+                </div>
+                <div class="program-arrow">→</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — HOW IT WORKS -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="how-it-works-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">SIMPLE PROCESS</span>
+            <h2 id="how-it-works-heading" class="h2-display text-dark mt-2">Your Journey, Made Simple.</h2>
+          </div>
+        </div>
+
+        <div class="timeline-wrapper reveal-on-scroll">
+          <div class="timeline-line">
+            <div class="timeline-line-progress"></div>
+          </div>
+
+          <div class="timeline-grid">
+            <!-- Step 1 -->
+            <div class="timeline-step">
+              <div class="timeline-num-badge">01</div>
+              <h3 class="h4 font-heading text-dark mb-1">Discover</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Explore verified coaches across strength, nutrition, and mobility specialties.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step">
+              <div class="timeline-num-badge">02</div>
+              <h3 class="h4 font-heading text-dark mb-1">Connect</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Choose a coach matching your preferences and submit a direct consultation request.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step">
+              <div class="timeline-num-badge">03</div>
+              <h3 class="h4 font-heading text-dark mb-1">Personalize</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Discuss your physical history, target goals, schedule, and custom strategy.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step">
+              <div class="timeline-num-badge">04</div>
+              <h3 class="h4 font-heading text-dark mb-1">Progress</h3>
+              <p class="text-secondary" style="font-size:0.95rem;">Execute your structured routine with ongoing coach accountability and feedback.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — NUTRITION & RECOVERY (SPLIT EDITORIAL) -->
+    <section class="section-padding bg-warm-white" aria-labelledby="split-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="split-img-wrapper reveal-on-scroll">
+              <img src="assets/images/program-nutrition.jpg" alt="Fresh nutrition preparation" class="img-fluid rounded-4 shadow-sm" loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <span class="text-label text-label-dark">HOLISTIC WELLNESS</span>
+            <h2 id="split-heading" class="h2-display text-dark mt-2">Progress Happens Beyond the Gym.</h2>
+            <p class="lead-text text-graphite mt-3">
+              Build sustainable habits with practical nutrition guidance, mobility work, and recovery routines that complement your training.
+            </p>
+
+            <ul class="feature-check-list">
+              <li class="feature-check-item text-dark">
+                <span class="check-icon-circle">✓</span>
+                Everyday practical nutrition guidance
+              </li>
+              <li class="feature-check-item text-dark">
+                <span class="check-icon-circle">✓</span>
+                Targeted mobility and flexibility routines
+              </li>
+              <li class="feature-check-item text-dark">
+                <span class="check-icon-circle">✓</span>
+                Structured rest and recovery planning
+              </li>
+              <li class="feature-check-item text-dark">
+                <span class="check-icon-circle">✓</span>
+                Sustainable habit building for long-term consistency
+              </li>
+            </ul>
+
+            <a href="services.html" class="btn-pulse btn-pulse-dark">
+              EXPLORE OUR SERVICES <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07 — FINAL CTA -->
+    <section class="section-padding bg-soft-gray text-center" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">START TODAY</span>
+            <h2 id="cta-heading" class="h1-display text-dark mt-2 mb-3">Ready to Move Forward?</h2>
+            <p class="lead-text text-graphite mb-4">Find the guidance, structure, and support to take your next step with confidence.</p>
+            <a href="services.html" class="btn-pulse btn-pulse-dark">
+              FIND YOUR COACH <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pulse-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="brand-logo text-white mb-3">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+                <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </span>
+            <span class="brand-wordmark">
+              <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+            </span>
+            <span class="brand-dot"></span>
+          </a>
+          <p class="text-graphite mb-0" style="font-size:0.95rem; max-width:280px;">
+            Train Smarter. Recover Better.<br>Connecting individuals with premier coaching guidance.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="footer-social-row">
+            <!-- Instagram -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="footer-social-btn" aria-label="Subscribe to PULSEFIT on YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#training" class="footer-link">Personal Training</a></li>
+            <li><a href="services.html#nutrition" class="footer-link">Nutrition Coaching</a></li>
+            <li><a href="services.html#recovery" class="footer-link">Mobility & Recovery</a></li>
+            <li><a href="services.html#coach-directory" class="footer-link">Coach Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Placeholder -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p class="text-graphite mb-2" style="font-size:0.9rem;">Have questions? Reach our team:</p>
+          <a href="mailto:hello@pulsefitmarketplace.com" class="text-success font-heading text-decoration-none" style="font-size:0.95rem;">hello@pulsefitmarketplace.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PULSEFIT Marketplace. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC MODAL CONTAINER -->
+  <div id="pulseDetailModal" class="modal-backdrop-custom" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content-custom">
+      <button class="modal-close-btn" aria-label="Close modal window">✕</button>
+      <div class="modal-body-dynamic">
+        <!-- Content injected dynamically via main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — PULSEFIT Marketplace</title>
+  <meta name="description" content="Get in touch with the PULSEFIT team to ask questions, request an introductory consultation, or get matched with a personal coach.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR (Solid state on interior pages) -->
+  <header class="pulse-header solid-nav" role="banner">
+    <div class="pulse-nav-container">
+      <a href="index.html" class="brand-logo" aria-label="PULSEFIT Homepage">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <nav class="desktop-nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="desktop-nav-link">Home</a>
+        <a href="about.html" class="desktop-nav-link">About</a>
+        <a href="services.html" class="desktop-nav-link">Services</a>
+        <a href="pricing.html" class="desktop-nav-link">Pricing</a>
+        <a href="contact.html" class="desktop-nav-link active">Contact</a>
+      </nav>
+
+      <div class="desktop-header-cta d-flex align-items-center gap-3">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+        <a href="services.html#coach-directory" class="btn-pulse btn-pulse-primary pulse-badge-glow">
+          <span class="d-inline-block rounded-circle bg-dark" style="width:6px; height:6px; margin-right:4px;"></span> Find Your Coach <span class="btn-icon">→</span>
+        </a>
+      </div>
+
+
+      <button class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileOverlay">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">
+          <span class="nav-num">01 —</span> Home
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">
+          <span class="nav-num">02 —</span> About
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="services.html" class="mobile-nav-link">
+          <span class="nav-num">03 —</span> Services
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="pricing.html" class="mobile-nav-link">
+          <span class="nav-num">04 —</span> Pricing
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link active">
+          <span class="nav-num">05 —</span> Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-overlay-footer">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <span class="mobile-tagline font-heading mb-0" style="font-size:0.85rem; color:var(--color-graphite);">Switch Theme</span>
+        <button class="theme-toggle-btn mobile-theme-toggle" aria-label="Toggle dark/light theme" title="Switch Theme">
+          <span class="theme-toggle-icon moon-icon">🌙</span>
+          <span class="theme-toggle-icon sun-icon d-none">☀️</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-pulse btn-pulse-primary w-100 text-center">Get Started Today</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- SECTION 01 — CONTACT HERO -->
+    <section class="section-padding bg-warm-white" aria-labelledby="contact-hero-heading">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">GET IN TOUCH</span>
+            <h1 id="contact-hero-heading" class="h1-display text-dark mt-2 mb-3">Let’s Find Your Fit.</h1>
+            <p class="lead-text text-graphite mb-0">
+              Have questions about our coaches, training methods, or nutrition programs? Send us a message and our team will guide you to the right coach.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — CONTACT FORM & DETAILS -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Form Left -->
+          <div>
+            <h2 id="form-heading" class="h2-display text-dark mb-4">Send an Inquiry</h2>
+
+            <!-- Success State Banner -->
+            <div id="contactSuccessBanner" class="contact-success-banner" role="alert">
+              ✓ Thank you for reaching out! Your inquiry details have been logged for demonstration. A PULSEFIT specialist will get in touch with you shortly.
+            </div>
+
+            <form id="pulseContactForm" novalidate>
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name *</label>
+                <input type="text" id="fullName" class="form-control-pulse" placeholder="e.g. Sarah Jenkins" required>
+                <div class="invalid-feedback-custom">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" class="form-control-pulse" placeholder="e.g. sarah@example.com" required>
+                <div class="invalid-feedback-custom">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number (Optional)</label>
+                <input type="tel" id="phone" class="form-control-pulse" placeholder="e.g. +1 (555) 019-2834">
+              </div>
+
+              <div class="form-group">
+                <label for="areaOfInterest" class="form-label">Area of Interest *</label>
+                <select id="areaOfInterest" class="form-control-pulse" required>
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="Personal Training">Personal Training</option>
+                  <option value="Strength & Conditioning">Strength & Conditioning</option>
+                  <option value="Nutrition Coaching">Nutrition Coaching</option>
+                  <option value="Mobility & Recovery">Mobility & Recovery</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+                <div class="invalid-feedback-custom">Please select an area of interest.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredContact" class="form-label">Preferred Contact Method</label>
+                <select id="preferredContact" class="form-control-pulse">
+                  <option value="Email">Email</option>
+                  <option value="Phone">Phone</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message *</label>
+                <textarea id="message" rows="5" class="form-control-pulse" placeholder="Tell us about your fitness history and goals..." required></textarea>
+                <div class="invalid-feedback-custom">Please enter your message (at least 10 characters).</div>
+              </div>
+
+              <button type="submit" class="btn-pulse btn-pulse-dark w-100 mt-2">
+                SEND MESSAGE <span class="btn-icon">→</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Details Right -->
+          <div>
+            <h2 class="h2-display text-dark mb-4">Direct Details</h2>
+            <div class="d-flex flex-column gap-4">
+              <div class="help-card">
+                <h3 class="h5 font-heading text-dark mb-2">Direct Inquiry Email</h3>
+                <p class="text-secondary mb-1" style="font-size:0.95rem;">For general questions or support:</p>
+                <a href="mailto:hello@pulsefitmarketplace.com" class="text-success font-heading text-decoration-none fw-bold" style="font-size:1.1rem;">hello@pulsefitmarketplace.com</a>
+              </div>
+
+              <div class="help-card">
+                <h3 class="h5 font-heading text-dark mb-2">Headquarters Studio</h3>
+                <p class="text-secondary mb-0" style="font-size:0.95rem;">
+                  PULSEFIT Athletic Marketplace<br>
+                  104 Performance Way, Suite 400<br>
+                  San Francisco, CA 94107
+                </p>
+              </div>
+
+              <div class="help-card">
+                <h3 class="h5 font-heading text-dark mb-2">Consultation Hours</h3>
+                <p class="text-secondary mb-0" style="font-size:0.95rem;">
+                  Monday – Friday: 06:00 AM – 08:00 PM PST<br>
+                  Saturday: 08:00 AM – 04:00 PM PST<br>
+                  Sunday: Rest & Recovery Day
+                </p>
+              </div>
+
+              <!-- Social Media Channels Card -->
+              <div class="help-card">
+                <h3 class="h5 font-heading text-dark mb-2">Connect With Us</h3>
+                <p class="text-secondary mb-2" style="font-size:0.95rem;">Follow our daily workouts, athlete spotlights & movement tips:</p>
+                <div class="social-links-grid">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Follow PULSEFIT on Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Subscribe to PULSEFIT on YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+                    </svg>
+                    <span>YouTube</span>
+                  </a>
+                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Follow PULSEFIT on X">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>X (Twitter)</span>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Follow PULSEFIT on LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Follow PULSEFIT on TikTok">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+                    </svg>
+                    <span>TikTok</span>
+                  </a>
+                  <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Listen to PULSEFIT Podcast on Spotify">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.12-.779-.18-.899-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/>
+                    </svg>
+                    <span>Podcast</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE MAP SECTION -->
+    <section class="section-padding bg-warm-white map-section-wrapper" aria-labelledby="map-heading">
+      <div class="container">
+        <div class="row text-center mb-4 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">LOCATION & DIRECTIONS</span>
+            <h2 id="map-heading" class="h2-display text-dark mt-2">Visit Our Studio Headquarters.</h2>
+            <p class="lead-text text-graphite mb-4">
+              Come meet our certified coaches, experience our specialized athletic facility, or drop in for an in-person movement assessment.
+            </p>
+
+            <!-- Interactive Location Switcher -->
+            <div class="map-location-tabs" role="tablist" aria-label="Studio Location Selector">
+              <button class="map-tab-btn active" data-location="sf" role="tab" aria-selected="true" aria-controls="pulseMapCard">
+                San Francisco HQ
+              </button>
+              <button class="map-tab-btn" data-location="la" role="tab" aria-selected="false" aria-controls="pulseMapCard">
+                Los Angeles Studio
+              </button>
+              <button class="map-tab-btn" data-location="ny" role="tab" aria-selected="false" aria-controls="pulseMapCard">
+                New York Hub
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pulse-map-card shadow-md" id="pulseMapCard">
+          <div class="pulse-map-iframe-wrapper">
+            <iframe 
+              id="googleMapIframe"
+              class="pulse-map-iframe" 
+              src="https://maps.google.com/maps?q=104%20Performance%20Way%2C%20San%20Francisco%2C%20CA%2094107&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="PULSEFIT Location Map">
+            </iframe>
+
+            <!-- Floating Overlay Card -->
+            <div class="pulse-map-overlay-card text-dark shadow-lg border border-secondary border-opacity-15">
+              <div class="d-flex align-items-center mb-2">
+                <span class="live-status-dot"></span>
+                <span class="font-heading text-dark fw-bold" style="font-size:0.85rem; letter-spacing:0.05em; text-transform:uppercase;" id="mapStatusText">Studio Open • 06:00 AM – 08:00 PM PST</span>
+              </div>
+              <h3 class="h4 font-heading text-dark mb-2" id="mapLocationTitle">San Francisco HQ</h3>
+              <p class="text-secondary mb-3" style="font-size:0.92rem; line-height:1.5;" id="mapAddressText">
+                104 Performance Way, Suite 400<br>
+                San Francisco, CA 94107
+              </p>
+              <div class="border-top border-secondary border-opacity-25 pt-3 mt-3">
+                <div class="d-flex align-items-center gap-2 text-secondary mb-1" style="font-size:0.85rem;">
+                  <span>📞 Phone:</span>
+                  <a href="tel:+15550192834" class="text-dark text-decoration-none fw-semibold" id="mapPhoneText">+1 (555) 019-2834</a>
+                </div>
+                <div class="d-flex align-items-center gap-2 text-secondary mb-3" style="font-size:0.85rem;">
+                  <span>🚗 Parking:</span>
+                  <span class="text-dark fw-semibold" id="mapParkingText">Free Underground Member Garage</span>
+                </div>
+
+                <div class="map-actions-group">
+                  <a href="https://maps.google.com/?q=104+Performance+Way+San+Francisco+CA+94107" target="_blank" rel="noopener noreferrer" class="btn-map-action btn-map-primary" id="mapDirectionsBtn">
+                    Get Directions ↗
+                  </a>
+                  <a href="tel:+15550192834" class="btn-map-action btn-map-secondary text-dark border-dark" id="mapCallBtn">
+                    Call Studio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — HOW WE CAN HELP -->
+    <section class="section-padding bg-soft-gray" aria-labelledby="help-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">DIRECT ASSISTANCE</span>
+            <h2 id="help-heading" class="h2-display text-dark mt-2">How We Can Help.</h2>
+          </div>
+        </div>
+
+        <div class="pulse-grid-3">
+          <div class="help-card text-center">
+            <div class="pillar-icon-box mx-auto mb-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="h4 text-dark font-heading mb-2">Coach Discovery</h3>
+            <p class="text-secondary mb-0" style="font-size:0.95rem;">Assistance matching your specific mechanical needs with certified trainers.</p>
+          </div>
+
+          <div class="help-card text-center">
+            <div class="pillar-icon-box mx-auto mb-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="h4 text-dark font-heading mb-2">Program Questions</h3>
+            <p class="text-secondary mb-0" style="font-size:0.95rem;">Clarification regarding strength splits, nutrition guides, or mobility routines.</p>
+          </div>
+
+          <div class="help-card text-center">
+            <div class="pillar-icon-box mx-auto mb-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="h4 text-dark font-heading mb-2">General Support</h3>
+            <p class="text-secondary mb-0" style="font-size:0.95rem;">General platform inquiries, remote options, and consultation scheduling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- SECTION 04 — FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-padding bg-warm-white" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="row text-center mb-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="text-label text-label-dark">GOT QUESTIONS?</span>
+            <h2 id="faq-heading" class="h2-display text-dark mt-2">Frequently Asked Questions.</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion-pulse">
+              <!-- Question 1 -->
+              <div class="accordion-item-pulse is-open">
+                <button class="accordion-header-pulse" aria-expanded="true">
+                  <span>How do I choose a coach?</span>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body-pulse">
+                  You can explore our Coach Directory on the Services page and filter by specialty (Strength, Nutrition, Mobility, or Recovery). Each coach profile outlines their background, methodology, and specialties so you can choose someone who aligns with your goals.
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="accordion-item-pulse">
+                <button class="accordion-header-pulse" aria-expanded="false">
+                  <span>Can I combine training and nutrition coaching?</span>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body-pulse">
+                  Yes! Many of our clients opt for integrated programs combining physical strength training with custom nutrition planning to maximize energy and body composition results.
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div class="accordion-item-pulse">
+                <button class="accordion-header-pulse" aria-expanded="false">
+                  <span>Are remote coaching options available?</span>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body-pulse">
+                  Absolutely. All PULSEFIT coaches offer remote 1-on-1 coaching options, including video movement form checks, custom app-delivered programming, and scheduled check-in calls.
+                </div>
+              </div>
+
+              <!-- Question 4 -->
+              <div class="accordion-item-pulse">
+                <button class="accordion-header-pulse" aria-expanded="false">
+                  <span>How do I request an introductory consultation?</span>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body-pulse">
+                  Simply fill out the contact inquiry form on this page or click 'Enquire' on any coach's profile card. A coach or specialist will reach out within 24 hours to schedule a phone or video call.
+                </div>
+              </div>
+
+              <!-- Question 5 -->
+              <div class="accordion-item-pulse">
+                <button class="accordion-header-pulse" aria-expanded="false">
+                  <span>Can I change my coaching preferences?</span>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body-pulse">
+                  Yes, your training and lifestyle needs may evolve. You can easily adjust your program focus or transition to a different coaching specialty at any time.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pulse-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-logo text-white mb-3">
+            <span class="brand-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#151917" stroke="#B9F56A" stroke-width="1.5"/>
+            <polyline points="5,18 10,18 13,11 16,25 19,14 22,20 25,18 31,18" stroke="#B9F56A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-pulse">PULSE</span><span class="brand-wordmark-fit">FIT</span>
+        </span>
+        <span class="brand-dot"></span>
+          </a>
+          <p class="text-graphite mb-0" style="font-size:0.95rem; max-width:280px;">
+            Train Smarter. Recover Better.<br>Connecting individuals with premier coaching guidance.
+          </p>
+          <!-- Social Icons -->
+          <div class="footer-social-row">
+            <!-- Instagram -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="footer-social-btn" aria-label="Subscribe to PULSEFIT on YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="footer-social-btn" aria-label="Follow PULSEFIT on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#training" class="footer-link">Personal Training</a></li>
+            <li><a href="services.html#nutrition" class="footer-link">Nutrition Coaching</a></li>
+            <li><a href="services.html#recovery" class="footer-link">Mobility & Recovery</a></li>
+            <li><a href="services.html#coach-directory" class="footer-link">Coach Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p class="text-graphite mb-2" style="font-size:0.9rem;">Have questions? Reach our team:</p>
+          <a href="mailto:hello@pulsefitmarketplace.com" class="text-success font-heading text-decoration-none" style="font-size:0.95rem;">hello@pulsefitmarketplace.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PULSEFIT Marketplace. All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC MODAL CONTAINER -->
+  <div id="pulseDetailModal" class="modal-backdrop-custom" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content-custom">
+      <button class="modal-close-btn" aria-label="Close modal window">✕</button>
+      <div class="modal-body-dynamic"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top-btn" aria-label="Scroll to top of page">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
