@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    PULSEFIT — Personal Trainer & Coach Marketplace
    Style Architecture
    ========================================================================== 
@@ -420,7 +420,7 @@ h4 {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-warm-white);
+  background-color: var(--color-midnight);
   border-radius: 2px;
   transition: transform var(--transition-fast), opacity var(--transition-fast), background-color var(--transition-fast);
 }
@@ -3605,3 +3605,134 @@ html[data-theme="dark"] body .hero-db-cta:hover,
 
 
 
+
+/* Light theme: hero background image clearly visible (desktop, tablet & mobile) */
+html:not([data-theme="dark"]) .hero-bg-img {
+  opacity: 0.6;
+  filter: none;
+}
+html:not([data-theme="dark"]) .hero-overlay {
+  background: linear-gradient(180deg, rgba(248, 248, 243, 0.45) 0%, rgba(248, 248, 243, 0.6) 55%, rgba(248, 248, 243, 0.85) 100%);
+}
+
+/* Footer brand name: always light text on the dark footer (all themes) */
+.pulse-footer .brand-logo,
+.pulse-footer .brand-wordmark-pulse,
+.pulse-footer .brand-wordmark-fit {
+  color: #F8F8F3 !important;
+}
+
+/* Core Principles cards: light text on dark card background (all themes) */
+.philosophy-card h3,
+.philosophy-card .text-dark {
+  color: #F8F8F3 !important;
+}
+.philosophy-card p,
+.philosophy-card .text-secondary {
+  color: rgba(248, 248, 243, 0.75) !important;
+}
+
+/* Pricing cards (dark card surface): light text + visible MOST POPULAR badge, both themes */
+.pricing-card h3,
+.pricing-card .text-dark,
+.pricing-card .price-display:not(.text-success) {
+  color: #F8F8F3 !important;
+}
+.pricing-card p,
+.pricing-card .text-secondary,
+.pricing-card .price-period,
+.pricing-card li {
+  color: rgba(248, 248, 243, 0.78) !important;
+}
+.pricing-card .feature-check-item.text-dark {
+  color: #F8F8F3 !important;
+}
+.pricing-card .feature-check-item.opacity-50 {
+  color: rgba(248, 248, 243, 0.55) !important;
+}
+.pricing-card .pricing-badge {
+  top: 0.9rem;
+  right: 1.25rem;
+  z-index: 5;
+  color: #151917 !important;
+}
+.pricing-card.featured {
+  padding-top: 3.25rem;
+}
+
+/* Contact page: Location & Directions - mobile/tablet layout */
+@media (max-width: 991.98px) {
+  .pulse-map-iframe-wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .pulse-map-iframe {
+    height: 300px;
+    flex-shrink: 0;
+  }
+  .pulse-map-overlay-card {
+    padding: 1.5rem 1.25rem;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #151917;
+  }
+  .pulse-map-overlay-card .text-dark,
+  .pulse-map-overlay-card h3 {
+    color: #F8F8F3 !important;
+  }
+  .pulse-map-overlay-card .text-secondary,
+  .pulse-map-overlay-card p {
+    color: rgba(248, 248, 243, 0.75) !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .map-location-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .map-tab-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .pulse-map-iframe { height: 240px; }
+  .map-actions-group {
+    flex-direction: column;
+  }
+  .btn-map-action {
+    width: 100%;
+    white-space: normal;
+  }
+}
+
+/* Map overlay card (dark surface): light text at all sizes & themes */
+.pulse-map-overlay-card,
+.pulse-map-overlay-card h3,
+.pulse-map-overlay-card .text-dark,
+.pulse-map-overlay-card #mapStatusText {
+  color: #F8F8F3 !important;
+}
+.pulse-map-overlay-card p,
+.pulse-map-overlay-card .text-secondary {
+  color: rgba(248, 248, 243, 0.78) !important;
+}
+.pulse-map-overlay-card a.text-dark,
+.pulse-map-overlay-card #mapParkingText {
+  color: #B9F56A !important;
+}
+.pulse-map-overlay-card .btn-map-secondary,
+.pulse-map-overlay-card .btn-map-secondary.text-dark {
+  color: #F8F8F3 !important;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+.pulse-map-overlay-card .btn-map-primary {
+  color: #151917 !important;
+}
